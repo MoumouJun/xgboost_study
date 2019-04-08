@@ -1,18 +1,26 @@
+0.参考网站
+	1.廖雪峰博客：
+	2.git笔记：https://yanhaijing.com/git/2014/11/01/my-git-note/
+	
+
 1.安装git：
 	1.官网安装https://git-scm.com/download/win，加入环境变量path
-2.建立本地仓库（工作区与暂存区）：
-	1.git init 
-	2.git add filename	git commit -m 'file name change num'
-	3.
+2.建立仓库（工作区与暂存区）：
+	1.git init	#初始化仓库
+	2.git status	#获取状态
+	3.git add filename1 filename2	#.或*代表全部添加
+	4.git commit -m 'message'	#此处注意乱码
+	5.git remote add origin https://github.com/MoumouJun/xgboost_study.git	#添加源
+	6.git push -u origin master	#第一次提交使用'-u'参数，
 3.文件管理（修改/撤销/删除）：
-
+	#可以直接在文件中进行，可以不用命令行操作
 4.远程库：git remote
 	1.添加远程库：
-		git remote add origin https://github.com/MoumouJun/xgboost_study.git
-		第一次git push -u origin master	以后 git push origin master
+		git remote add origin https://github.com/MoumouJun/xgboost_study.git	
+		git push -u origin master	以后 git push origin master	#第一次提交，-u参数
 		
 	2.克隆远程库：
-		http形式：git clone https://github.com/MoumouJun/xgboost_study.git，区别ssh形式/
+		git clone https://github.com/MoumouJun/xgboost_study.git	#http形式，区别ssh形式
 
 4.分支管理：
 	1.创建/合并/推送分支：：
@@ -31,5 +39,3 @@ N.其他操作：
 	2.重命名mv：git mv -f old_file_name new_file_name,git add -u new_file_name
 	3.	git config --global user.name "Your Name"
 		git config --global user.email you@example.com
-		After doing this, you may fix the identity used for this commit with:
-		git commit --amend --reset-author
